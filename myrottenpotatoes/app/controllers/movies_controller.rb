@@ -22,8 +22,6 @@ def create
   redirect_to movies_path
 end
 
-# in movies_controller.rb
-
 def edit
   @movie = Movie.find params[:id]
 end
@@ -41,7 +39,6 @@ def destroy
   flash[:notice] = "Movie '#{@movie.title}' deleted."
   redirect_to movies_path
 end
-
 private 
   
   def movie_params
